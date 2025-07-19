@@ -40,7 +40,7 @@ const books = [
 // Routes
 app.get('/', (req, res) => {
   res.render('home', { 
-    books: books.slice(0, 3),
+    books: books,
     cart: req.session.cart  // Explicitly pass cart
   });
 });

@@ -7,7 +7,11 @@
         <ul class="cart-items">
             <% cart.forEach(item => { %>
                 <li>
-                    <%= item.title %> - $<%= item.price.toFixed(2) %>
+                    <div class="cart-item">
+                        <span class="title"><%= item.title %></span>
+                        <span class="author">by <%= item.author %></span>
+                        <span class="price">$<%= item.price.toFixed(2) %></span>
+                    </div>
                 </li>
             <% }); %>
         </ul>
