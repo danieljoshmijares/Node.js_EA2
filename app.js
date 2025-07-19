@@ -31,11 +31,15 @@ app.use((req, res, next) => {
 
 // Sample book data
 const books = [
-  { id: 1, title: 'The Great Gatsby', price: 12.99 },
-  { id: 2, title: 'To Kill a Mockingbird', price: 10.50 },
-  { id: 3, title: '1984', price: 8.75 },
-  { id: 4, title: 'Pride and Prejudice', price: 9.99 }
-];
+  { id: 1, title: 'JavaScript: The Good Parts', author: 'Douglas Crockford', price: 24.99 },
+  { id: 2, title: 'You Don\'t Know JS', author: 'Kyle Simpson', price: 29.99 },
+  { id: 3, title: 'Eloquent JavaScript', author: 'Marijn Haverbeke', price: 19.95 },
+  { id: 4, title: 'Designing Web APIs', author: 'Brenda Jin', price: 34.99 },
+  { id: 5, title: 'The Pragmatic Programmer', author: 'Andrew Hunt', price: 27.50 },
+  { id: 6, title: 'Clean Code', author: 'Robert C. Martin', price: 32.75 },
+  { id: 7, title: 'Node.js Design Patterns', author: 'Mario Casciaro', price: 39.99 },
+  { id: 8, title: 'CSS Secrets', author: 'Lea Verou', price: 28.95 }
+]; 
 
 // Routes
 app.get('/', (req, res) => {
