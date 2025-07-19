@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+    <h1>Your Shopping Cart</h1>
+    
+    <% if (cart.length === 0) { %>
+        <p>Your cart is empty</p>
+    <% } else { %>
+        <ul class="cart-items">
+            <% cart.forEach(item => { %>
+                <li>
+                    <%= item.title %> - $<%= item.price.toFixed(2) %>
+                </li>
+            <% }); %>
+        </ul>
+        
+        <div class="total">
+            <strong>Total: $<%= total.toFixed(2) %></strong>
+        </div>
+        
+        <form action="/buy" method="POST">
+            <button type="submit">Buy Now</button>
+        </form>
+    <% } %>
+<%- include('partials/footer') %>

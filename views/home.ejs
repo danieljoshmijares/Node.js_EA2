@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+    <section class="banner">
+        <h1>Welcome to Book Haven</h1>
+        <p>Your one-stop shop for literary treasures</p>
+    </section>
+
+    <section class="featured">
+        <h2>Featured Books</h2>
+        <div class="books">
+            <% books.forEach(book => { %>
+                <div class="book-card">
+                    <h3><%= book.title %></h3>
+                    <p>$<%= book.price.toFixed(2) %></p>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+
+    <section class="developer">
+        <h2>About the Developer</h2>
+        <div class="profile">
+            <img src="/images/developer.jpg" alt="Web Developer">
+            <div>
+                <h3>Daniel Josh Mijares</h3>
+                <p>Full Stack Developer | Book Lover</p>
+                <p>Contact: your.email@example.com</p>
+            </div>
+        </div>
+    </section>
+<%- include('partials/footer') %>

@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+    <h1>Our Book Collection</h1>
+    
+    <form action="/add-to-cart" method="POST">
+        <select name="bookId" class="book-select">
+            <% books.forEach(book => { %>
+                <option value="<%= book.id %>">
+                    <%= book.title %> - $<%= book.price.toFixed(2) %>
+                </option>
+            <% }); %>
+        </select>
+        <button type="submit">Add to Cart</button>
+    </form>
+    
+    <div class="book-grid">
+        <% books.forEach(book => { %>
+            <div class="book-card">
+                <h3><%= book.title %></h3>
+                <p>$<%= book.price.toFixed(2) %></p>
+            </div>
+        <% }); %>
+    </div>
+<%- include('partials/footer') %>
