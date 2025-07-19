@@ -13,5 +13,3 @@ Thumbs.db
 dist/
 *.log
 
-# Images and other assets (optional)
-public/images/
